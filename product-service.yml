@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc://mysql://localhost:3306/product_service_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernet:
+      ddl-auto: validate
+    show-sql: true
+    database: mysql
+  
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    user: root
+    password: root
+    baseline-description: "init"
+    baseline-version: 0
+server:
+  port: 8083
